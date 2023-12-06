@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+}
+
+#main{
+    display: flex;
+    flex: 1;
+}
+
+#main>article{
+    line-height: 60px;
+    font-size: 20px;
+    flex: 1;
+    order: 1;
+}
+
+#main>nav,#main>aside{
+    font-size: 20px;
+    line-height: 60px;
+    flex: 0 0 20vw;
+}
+
+#main Nav{
+    background-color: #16c0af;
+    font-size: 20px;
+    line-height: 60px;
+    order: 3;
+}
+
+#main aside{
+    font-size: 20px;
+    line-height: 60px;
+    background-color:hotpink;
+    order: 2;
+}
+
+header,footer{
+    font-size: 20px;
+    line-height: 60px;
+    background-color: khaki;
+    height: 20vh;
+}
