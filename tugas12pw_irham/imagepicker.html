@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praktikum Js 4</title>
+    <style>
+        img {
+            width: 500px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <select id="image" onchange="gantiFoto()">
+        <option value="">Pilih</option>
+        <option value="./img/burung.jpeg">Image 1</option>
+        <option value="./img/cheetah.jpg">Image 2</option>
+        <option value="./img/hamster.jpg">Image 3</option>
+        <option value="./img/kucing.jpeg">Image 4</option>
+        <option value="./img/lumba.jpeg">Image 5</option>
+        <option value="./img/penguin.jpg">Image 6</option>
+    </select>
+
+    <br /><br />
+
+    <img id="kotakFoto" src="" alt="Pilih Foto" />
+
+    <button onclick="tampilkanAlert()">Tampilkan Nama</button>
+
+    <script>
+        function gantiFoto() {
+            let pilihFoto = document.getElementById("image").value;
+            document.getElementById("kotakFoto").src = pilihFoto;
+        }
+
+        function tampilkanAlert() {
+            let pilihFoto = document.getElementById("image").value;
+
+            if (pilihFoto) {
+                let namaFile = pilihFoto.split("/").pop();
+                alert("ini gambar " + namaFile);
+            } else {
+                alert("Pilih gambar terlebih dahulu!");
+            }
+        }
+    </script>
+</body>
+</html>
